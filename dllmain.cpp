@@ -10,6 +10,7 @@
 #include "src/patches/GamePriority.h"
 #include "src/patches/FriendlistPatch.h"
 #include "src/patches/MatchEndCrashFix.h"
+#include "src/patches/DisableBackgroundVideo.h"
 
 void InitializePatches(HMODULE hModule) {
     char dllPath[MAX_PATH];
@@ -37,6 +38,7 @@ void InitializePatches(HMODULE hModule) {
     manager.RegisterPatch<GamePriorityPatch>();
     manager.RegisterPatch<FriendlistPatch>();
     manager.RegisterPatch<MatchEndCrashFixPatch>();
+	manager.RegisterPatch<DisableBackgroundVideoPatch>();
 
     manager.ApplyAllPatches();
 }

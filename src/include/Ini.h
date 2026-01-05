@@ -21,13 +21,13 @@ public:
 
         iniFile << "[CONFIGS]\n";
         iniFile << "# Master switch to enable/disable all patches\n";
-        iniFile << "# [ 0 = Disabled, 1 = Enabled ]\n";
+        iniFile << "# [ 0 = Disabled, 1 = Enabled (default) ]\n";
         iniFile << "bPatchEnabled=1\n";
         iniFile << "\n";
 
         iniFile << "[PATCHES]\n";
         iniFile << "# Workaround to fix the same bug found in the 2010 version by disabling CPU 0 affinity on game launch\n";
-        iniFile << "# [ 0 = Disabled, 1 = Enabled ]\n";
+        iniFile << "# [ 0 = Disabled, 1 = Enabled (default) ]\n";
         iniFile << "bAffinityFix=1\n";
         iniFile << "\n";
 
@@ -38,13 +38,20 @@ public:
         iniFile << "\n";
 
         iniFile << "# Fixes a bug that causes the game to crash when trying to load more than 199 friends in solo careers\n";
-        iniFile << "# [ 0 = Disabled, 1 = Enabled ]\n";
+        iniFile << "# [ 0 = Disabled, 1 = Enabled (default) ]\n";
         iniFile << "bFriendlistPatch=1\n";
         iniFile << "\n";
 
         iniFile << "# Fixes a rare crash that may occurs at the end of a match\n";
-        iniFile << "# [ 0 = Disabled, 1 = Enabled ]\n";
+        iniFile << "# [ 0 = Disabled, 1 = Enabled (default) ]\n";
         iniFile << "bMatchEndCrashFix=1\n";
+        iniFile << "\n";
+
+        iniFile << "# Disable background menu video\n";
+        iniFile << "# Sometimes the game overlapping the videos causing the frame to drop and stutter\n";
+        iniFile << "#     WARNING: Enabling this will cause any video in game to not load\n";
+        iniFile << "# [ 0 = Disabled (default), 1 = Enabled ]\n";
+        iniFile << "bDisableBackgroundVideo=0\n";
         iniFile << "\n";
 
         iniFile.close();

@@ -161,6 +161,7 @@
     <ClInclude Include="src\include\PatchBase.h" />
     <ClInclude Include="src\include\PatchManager.h" />
     <ClInclude Include="src\patches\AffinityFix.h" />
+    <ClInclude Include="src\patches\DisableBackgroundVideo.h" />
     <ClInclude Include="src\patches\FriendlistPatch.h" />
     <ClInclude Include="src\patches\GamePriority.h" />
     <ClInclude Include="src\patches\MatchEndCrashFix.h" />
