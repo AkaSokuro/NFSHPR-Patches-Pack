@@ -14,6 +14,17 @@ protected:
         return WriteProcessMemory(hProcess, (LPVOID)address, data, size, NULL) != 0;
     }
 
+    bool ReadMemory(uintptr_t address, void* buffer, size_t size) {
+        std::lock_guard<std::mutex> lock(memoryWriteMutex);
+        SIZE_T bytesRead = 0;
+        return ReadProcessMemory(hProcess, (LPCVOID)address, buffer, size, &bytesRead) != 0 && bytesRead == size;
+    }
+
+    template<typename T>
+    bool ReadMemory(uintptr_t address, T& value) {
+        return ReadMemory(address, &value, sizeof(T));
+    }
+
 public:
     PatchBase(HANDLE process, uintptr_t base, const std::string& ini)
         : hProcess(process), baseAddress(base), iniPath(ini) {
