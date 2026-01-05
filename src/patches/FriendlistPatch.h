@@ -10,6 +10,32 @@ public:
     const char* GetIniKey() const override { return "bFriendlistPatch"; }
     int GetDefaultEnabled() const override { return 1; }
 
+    bool ShouldApply() override {
+        if (!PatchBase::ShouldApply()) {
+            return false;
+        }
+
+        uintptr_t addr = baseAddress + 0x1288A30;
+        uintptr_t ptr = 0;
+
+        if (!ReadMemory(addr, ptr)) {
+            return false;
+        }
+
+        if (ptr == 0) {
+            return false;
+        }
+
+        uint32_t value = 0;
+        uintptr_t targetAddr = ptr + 0x39F60;
+
+        if (!ReadMemory(targetAddr, value)) {
+            return false;
+        }
+
+        return value == 1;
+    }
+
     void Apply() override {
         uintptr_t addr1 = baseAddress + 0x1A64F370;
         unsigned char patch1[] = {
