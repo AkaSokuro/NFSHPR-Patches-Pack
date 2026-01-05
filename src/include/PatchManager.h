@@ -39,4 +39,14 @@ public:
 
         patchesApplied = true;
     }
+
+    void ApplyDelayedPatches() {
+        std::lock_guard<std::mutex> lock(patchMutex);
+
+        for (auto& patch : patches) {
+            if (!patch->IsApplied() && patch->ShouldApply()) {
+                patch->ApplySafe();
+            }
+        }
+    }
 };
