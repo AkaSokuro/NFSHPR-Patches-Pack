@@ -1,5 +1,6 @@
 # NFSHPR - Patches Pack
-[![GitHub release](https://img.shields.io/github/v/release/AkaSokuro/NFSHPR-Patches-Pack?color=red)](https://github.com/AkaSokuro/NFSHPR-Patches-Pack/releases)
+[![GitHub release](https://img.shields.io/github/v/release/AkaSokuro/NFSHPR-Patches-Pack?color=ff0000)](https://github.com/AkaSokuro/NFSHPR-Patches-Pack/releases)
+[![GitHub download](https://img.shields.io/github/downloads/AkaSokuro/NFSHPR-Patches-Pack/latest/nfshpr-patches.zip?color=white)](https://github.com/AkaSokuro/NFSHPR-Patches-Pack/releases/latest/download/nfshpr-patches.zip)
 
 An **unofficial patch collection** that fixes several bugs for **Need for Speed: Hot Pursuit Remastered**.
 
