@@ -35,3 +35,7 @@ It is an **unofficial community patch** for the game. The source code is fully d
 Feel free to submit bug fixes or additional patches via pull requests.
 
 **Important:** Please refrain from adding patches that provide unfair advantages in online sessions to maintain fair play for all players.
+
+## Credits
+- Original Patches by **TwinShards**
+- ASI Loader by **ThirteenAG**
