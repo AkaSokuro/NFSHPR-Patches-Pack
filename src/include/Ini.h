@@ -37,7 +37,7 @@ public:
         iniFile << "iGamePriority=3\n";
         iniFile << "\n";
 
-        iniFile << "# Fixes a bug that causes the game to crash when trying to load more than 199 friends in solo careers\n";
+        iniFile << "# Fixes a bug that causes the game to crash when trying to load more than 99 friends in solo careers\n";
         iniFile << "# [ 0 = Disabled, 1 = Enabled (default) ]\n";
         iniFile << "bFriendlistPatch=1\n";
         iniFile << "\n";

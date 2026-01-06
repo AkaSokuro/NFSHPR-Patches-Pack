@@ -13,7 +13,7 @@ It is an **unofficial community patch** for the game. The source code is fully d
 ## Features
 ### Essentials
 - `Affinity Fix` - Workaround to fix the same bug found in the 2010 version by disabling CPU 0 affinity on game launch
-- `Friendlist Patch` - Fixes a bug that causes the game to crash when trying to load more than 199 friends in solo missions
+- `Friendlist Patch` - Fixes a bug that causes the game to crash when trying to load more than 99 friends in solo missions
 - `Match End Crash Fix` - Fixes a rare crash that may occurs at the end of a match
 
 ### Miscellaneous
